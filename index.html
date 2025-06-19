@@ -1,4 +1,8 @@
-@@ -5,100 +5,65 @@
+@@ -1,104 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <style>
@@ -6,44 +10,25 @@
             font-family: Arial, sans-serif;
         }
         #todoList {
-        table {
-            width: 100%;
             border-collapse: collapse;
             width: 70%;
             margin: 0 auto;
         }
         #todoList th, #todoList td {
             border: 1px solid #ddd;
-        th, td {
-            border: 1px solid black;
             padding: 8px;
             text-align: left;
         }
         #todoList th {
             background-color: #f0f0f0;
-        th {
-            background-color: #f2f2f2;
-        }
-        .delete-btn {
-            cursor: pointer;
-            background-color: #ff4d4d;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
         }
         #todoList th:first-child, #todoList th:last-child {
             width: 5%;
-        .delete-btn:hover {
-            background-color: #cc0000;
         }
         #todoList th:nth-child(2) {
             width: 90%;
-        .delete-form {
-            display: inline;
         }
         .add-form {
-        form {
             margin-top: 20px;
             width: 70%;
             margin: 20px auto;
@@ -51,42 +36,67 @@
         .add-form input[type="text"] {
             padding: 8px;
             width: 70%;
-        input[type="text"] {
-            padding: 5px;
-            width: 200px;
         }
         .add-form button {
             padding: 8px;
             width: 20%;
-        button[type="submit"] {
-            padding: 5px 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        button[type="submit"]:hover {
-            background-color: #45a049;
         }
     </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List (Delete)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #todoList {
+      border-collapse: collapse;
+      width: 70%;
+      margin: 0 auto;
+    }
+    #todoList th,
+    #todoList td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    #todoList th {
+      background-color: #f0f0f0;
+    }
+    #todoList th:first-child,
+    #todoList th:last-child {
+      width: 5%;
+    }
+    #todoList th:nth-child(2) {
+      width: 90%;
+    }
+    .delete-form button {
+      padding: 4px 8px;
+    }
+  </style>
 </head>
 <body>
 
 <h2 style="text-align: center;">To-Do List</h2>
+  <h2 style="text-align: center;">To-Do List (Delete)</h2>
 
 <table id="todoList">
+  <table id="todoList">
     <thead>
-    <h1>To-Do List</h1>
-    <table>
         <tr>
             <th>Number</th>
             <th>Text</th>
             <th>Action</th>
         </tr>
+      <tr>
+        <th>Number</th>
+        <th>Text</th>
+        <th>Action</th>
+      </tr>
     </thead>
     <tbody id="listBody">
         {{rows}}
+      {{rows}}
     </tbody>
 </table>
 
@@ -130,11 +140,7 @@
         renderList();
     }
 </script>
+  </table>
 
-    </table>
-    <form>
-        <input type="text" placeholder="Enter new task">
-        <button type="submit">Add</button>
-    </form>
 </body>
 </html>
